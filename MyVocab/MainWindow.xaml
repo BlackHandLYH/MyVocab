@@ -1,0 +1,20 @@
+﻿<Window x:Name="MyVocabWindow" x:Class="MyVocab.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyVocab"
+        mc:Ignorable="d"
+        Title="MyVocaulary" Height="450" Width="751.087" Loaded="MyVocabWindow_Loaded" WindowStartupLocation="CenterScreen" MouseLeftButtonDown="MyVocabWindow_MouseLeftButtonDown" ResizeMode="NoResize" WindowStyle="None">
+    <Window.Background>
+        <ImageBrush ImageSource="bg2.png"/>
+    </Window.Background>
+    <Grid Margin="10" MouseLeftButtonDown="Grid_MouseLeftButtonDown">
+        <TextBox x:Name="TextBoxWord" HorizontalAlignment="Left" Height="62" Margin="44,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="287" FontSize="20" FontFamily="Microsoft YaHei" VerticalContentAlignment="Center" KeyDown="TextBoxWord_KeyDown" BorderBrush="{x:Null}"/>
+        <TextBox x:Name="TextBoxMean" HorizontalAlignment="Left" Height="62" Margin="372,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="303" FontSize="20" FontFamily="Microsoft YaHei" VerticalContentAlignment="Center" KeyDown="TextBoxMean_KeyDown" BorderBrush="{x:Null}"/>
+        <TextBox x:Name="TextBoxNote" HorizontalAlignment="Left" Height="70" Margin="44,270,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="631" FontSize="20" FontFamily="Microsoft YaHei" KeyDown="TextBoxNote_KeyDown" BorderBrush="{x:Null}" VerticalContentAlignment="Center"/>
+        <Button x:Name="ButtonEnter" Content="!" HorizontalAlignment="Center" Margin="293,365,398,25" VerticalAlignment="Center" Width="40" Height="40" Background="{x:Null}" BorderBrush="White" Foreground="White" FontSize="28" FontWeight="Bold" Click="Button_Click"/>
+        <Label x:Name="LabelIndex" Content="126" HorizontalAlignment="Left" Height="35" Margin="137,94,0,0" VerticalAlignment="Top" Width="83" FontSize="22" VerticalContentAlignment="Bottom" FontFamily="OCR A Extended"/>
+        <Button x:Name="ButtonExit" Content="×" HorizontalAlignment="Center" Margin="374,365,317,25" VerticalAlignment="Center" Width="40" Height="40" Background="{x:Null}" BorderBrush="White" Foreground="White" FontSize="28" FontWeight="Bold" Click="ButtonExit_Click" VerticalContentAlignment="Center"/>
+    </Grid>
+</Window>

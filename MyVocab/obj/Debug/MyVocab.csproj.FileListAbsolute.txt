@@ -1,0 +1,14 @@
+D:\littlethings\MyVocab\MyVocab\bin\Debug\MyVocab.exe.config
+D:\littlethings\MyVocab\MyVocab\bin\Debug\MyVocab.exe
+D:\littlethings\MyVocab\MyVocab\bin\Debug\MyVocab.pdb
+D:\littlethings\MyVocab\MyVocab\obj\Debug\MainWindow.g.cs
+D:\littlethings\MyVocab\MyVocab\obj\Debug\App.g.cs
+D:\littlethings\MyVocab\MyVocab\obj\Debug\MyVocab_MarkupCompile.cache
+D:\littlethings\MyVocab\MyVocab\obj\Debug\MyVocab_MarkupCompile.lref
+D:\littlethings\MyVocab\MyVocab\obj\Debug\MainWindow.baml
+D:\littlethings\MyVocab\MyVocab\obj\Debug\MyVocab.g.resources
+D:\littlethings\MyVocab\MyVocab\obj\Debug\MyVocab.Properties.Resources.resources
+D:\littlethings\MyVocab\MyVocab\obj\Debug\MyVocab.csproj.GenerateResource.cache
+D:\littlethings\MyVocab\MyVocab\obj\Debug\MyVocab.csproj.CoreCompileInputs.cache
+D:\littlethings\MyVocab\MyVocab\obj\Debug\MyVocab.exe
+D:\littlethings\MyVocab\MyVocab\obj\Debug\MyVocab.pdb
