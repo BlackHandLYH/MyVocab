@@ -110,11 +110,12 @@ namespace MyVocab
             sw.Close();
             fs.Close();
 
-            MessageBox.Show("Word No." + wordIndex.ToString() + ' ' + word + " is Recorded.");
+            MessageBox.Show("Word No." + wordIndex.ToString() + ' ' + word + " is Recorded.", "Done!", MessageBoxButton.OK, MessageBoxImage.Information);
 
             TextBoxWord.Text = "";
             TextBoxMean.Text = "";
             TextBoxNote.Text = "";
+            LabelIndex.Content = (wordIndex + 1).ToString();
 
             TextBoxWord.Focus();
         }
@@ -137,6 +138,37 @@ namespace MyVocab
         private void ButtonExit_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
+        }
+
+        private void ButtonChange_Click(object sender, RoutedEventArgs e)
+        {
+            Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
+            dlg.DefaultExt = ".png";
+            dlg.Filter = "JPEG Files (*.jpeg)|*.jpeg|PNG Files (*.png)|*.png|JPG Files (*.jpg)|*.jpg";
+            dlg.FilterIndex = 3;
+            Nullable<bool> result = dlg.ShowDialog();
+            if (result == true)
+            {
+                // Open document 
+                string bgName = dlg.FileName;
+
+                
+                BitmapImage image = new BitmapImage();
+                image.BeginInit();
+                image.UriSource = new Uri(bgName);
+                image.EndInit();
+                ImageBrush bg = new ImageBrush();
+                bg.ImageSource = image;
+                bg.Stretch = Stretch.UniformToFill;
+                MyVocabWindow.Background = bg;
+                
+            }
+            else
+            {
+                MessageBox.Show("Please Choose a Picture File!", "Uh-Oh!", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+
+            
         }
     }
 }

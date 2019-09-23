@@ -98,13 +98,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="bg.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="bg2.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="abc.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bg.JPG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

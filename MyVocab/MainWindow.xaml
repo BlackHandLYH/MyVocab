@@ -5,16 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyVocab"
         mc:Ignorable="d"
-        Title="MyVocaulary" Height="450" Width="751.087" Loaded="MyVocabWindow_Loaded" WindowStartupLocation="CenterScreen" MouseLeftButtonDown="MyVocabWindow_MouseLeftButtonDown" ResizeMode="NoResize" WindowStyle="None">
+        Title="MyVocaulary" Height="422" Width="751.087" Loaded="MyVocabWindow_Loaded" WindowStartupLocation="CenterScreen" MouseLeftButtonDown="MyVocabWindow_MouseLeftButtonDown" ResizeMode="NoResize" WindowStyle="None">
     <Window.Background>
-        <ImageBrush ImageSource="bg2.png"/>
+        <ImageBrush ImageSource="bg.JPG" Stretch="UniformToFill"/>
     </Window.Background>
     <Grid Margin="10" MouseLeftButtonDown="Grid_MouseLeftButtonDown">
-        <TextBox x:Name="TextBoxWord" HorizontalAlignment="Left" Height="62" Margin="44,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="287" FontSize="20" FontFamily="Microsoft YaHei" VerticalContentAlignment="Center" KeyDown="TextBoxWord_KeyDown" BorderBrush="{x:Null}"/>
-        <TextBox x:Name="TextBoxMean" HorizontalAlignment="Left" Height="62" Margin="372,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="303" FontSize="20" FontFamily="Microsoft YaHei" VerticalContentAlignment="Center" KeyDown="TextBoxMean_KeyDown" BorderBrush="{x:Null}"/>
-        <TextBox x:Name="TextBoxNote" HorizontalAlignment="Left" Height="70" Margin="44,270,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="631" FontSize="20" FontFamily="Microsoft YaHei" KeyDown="TextBoxNote_KeyDown" BorderBrush="{x:Null}" VerticalContentAlignment="Center"/>
-        <Button x:Name="ButtonEnter" Content="!" HorizontalAlignment="Center" Margin="293,365,398,25" VerticalAlignment="Center" Width="40" Height="40" Background="{x:Null}" BorderBrush="White" Foreground="White" FontSize="28" FontWeight="Bold" Click="Button_Click"/>
-        <Label x:Name="LabelIndex" Content="126" HorizontalAlignment="Left" Height="35" Margin="137,94,0,0" VerticalAlignment="Top" Width="83" FontSize="22" VerticalContentAlignment="Bottom" FontFamily="OCR A Extended"/>
-        <Button x:Name="ButtonExit" Content="×" HorizontalAlignment="Center" Margin="374,365,317,25" VerticalAlignment="Center" Width="40" Height="40" Background="{x:Null}" BorderBrush="White" Foreground="White" FontSize="28" FontWeight="Bold" Click="ButtonExit_Click" VerticalContentAlignment="Center"/>
+        <Rectangle Fill="White" HorizontalAlignment="Left" Height="381" Margin="10,10,0,0" VerticalAlignment="Top" Width="711" Opacity="0.4"/>
+        <Rectangle Fill="White" HorizontalAlignment="Left" Height="127" Margin="32,203,0,0" VerticalAlignment="Top" Width="661" Opacity="0.6"/>
+        <Rectangle Fill="White" HorizontalAlignment="Left" Height="127" Margin="370,64,0,0" VerticalAlignment="Top" Width="323" Opacity="0.6"/>
+        <Rectangle Fill="White" HorizontalAlignment="Left" Height="127" Margin="32,64,0,0" VerticalAlignment="Top" Width="323" Opacity="0.6"/>
+        <TextBox x:Name="TextBoxWord" HorizontalAlignment="Left" Height="62" Margin="43,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="20" FontFamily="Microsoft YaHei" VerticalContentAlignment="Center" KeyDown="TextBoxWord_KeyDown" BorderBrush="{x:Null}" Background="{x:Null}"/>
+        <TextBox x:Name="TextBoxMean" HorizontalAlignment="Left" Height="62" Margin="381,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="20" FontFamily="Microsoft YaHei" VerticalContentAlignment="Center" KeyDown="TextBoxMean_KeyDown" BorderBrush="{x:Null}" Background="{x:Null}"/>
+        <TextBox x:Name="TextBoxNote" HorizontalAlignment="Left" Height="70" Margin="44,245,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="631" FontSize="20" FontFamily="Microsoft YaHei" KeyDown="TextBoxNote_KeyDown" BorderBrush="{x:Null}" VerticalContentAlignment="Center" Background="{x:Null}"/>
+        <Button x:Name="ButtonEnter" Content="✔" HorizontalAlignment="Center" Margin="276,341,415,21" VerticalAlignment="Center" Width="40" Height="40" Background="#19B9FF00" BorderBrush="#FFB9FF00" Foreground="#FFB9FF00" FontSize="20" FontWeight="Bold" Click="Button_Click"/>
+        <Label x:Name="LabelIndex" Content="126" HorizontalAlignment="Left" Height="35" Margin="151,69,0,0" VerticalAlignment="Top" Width="83" FontSize="22" VerticalContentAlignment="Bottom" FontFamily="OCR A Extended"/>
+        <Button x:Name="ButtonExit" Content="✘" HorizontalAlignment="Center" Margin="407,341,284,21" VerticalAlignment="Center" Width="40" Height="40" Background="#19FF3A00" BorderBrush="#FFFF3A00" Foreground="#FFFF3A00" FontSize="22" FontWeight="Bold" Click="ButtonExit_Click" VerticalContentAlignment="Center"/>
+        <Button x:Name="ButtonChange" Content="♥" HorizontalAlignment="Center" Margin="342,341,349,21" VerticalAlignment="Center" Width="40" Height="40" Background="#19FF00AE" BorderBrush="#FFFF00AE" Foreground="#FFFF00AE" FontSize="20" FontWeight="Bold" VerticalContentAlignment="Center" Click="ButtonChange_Click"/>
+        <Label Content="My Vocabulary" HorizontalAlignment="Left" Height="59" Margin="212,10,0,0" VerticalAlignment="Top" Width="316" FontFamily="OCR A Extended" FontSize="38"/>
+        <Label Content="Word No." HorizontalAlignment="Left" Height="35" Margin="37,70,0,0" VerticalAlignment="Top" Width="155" FontFamily="OCR A Extended" FontSize="24" VerticalContentAlignment="Center"/>
+        <Label Content="Meaning" HorizontalAlignment="Left" Height="35" Margin="377,70,0,0" VerticalAlignment="Top" Width="155" FontFamily="OCR A Extended" FontSize="24" VerticalContentAlignment="Center"/>
+        <Label Content="Note" HorizontalAlignment="Left" Height="35" Margin="37,210,0,0" VerticalAlignment="Top" Width="155" FontFamily="OCR A Extended" FontSize="24" VerticalContentAlignment="Center"/>
     </Grid>
 </Window>
