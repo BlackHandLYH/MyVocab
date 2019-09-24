@@ -5,11 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyVocab"
         mc:Ignorable="d"
-        Title="MyVocaulary" Height="422" Width="751.087" Loaded="MyVocabWindow_Loaded" WindowStartupLocation="CenterScreen" MouseLeftButtonDown="MyVocabWindow_MouseLeftButtonDown" ResizeMode="NoResize" WindowStyle="None">
-    <Window.Background>
-        <ImageBrush ImageSource="bg.JPG" Stretch="UniformToFill"/>
-    </Window.Background>
-    <Grid Margin="10" MouseLeftButtonDown="Grid_MouseLeftButtonDown">
+        Title="MyVocaulary" Height="422" Width="751.087" Loaded="MyVocabWindow_Loaded" WindowStartupLocation="CenterScreen" MouseLeftButtonDown="MyVocabWindow_MouseLeftButtonDown" ResizeMode="NoResize" WindowStyle="None" Background="{x:Null}">
+    <Grid Margin="10">
         <Rectangle Fill="White" HorizontalAlignment="Left" Height="381" Margin="10,10,0,0" VerticalAlignment="Top" Width="711" Opacity="0.4"/>
         <Rectangle Fill="White" HorizontalAlignment="Left" Height="127" Margin="32,203,0,0" VerticalAlignment="Top" Width="661" Opacity="0.6"/>
         <Rectangle Fill="White" HorizontalAlignment="Left" Height="127" Margin="370,64,0,0" VerticalAlignment="Top" Width="323" Opacity="0.6"/>

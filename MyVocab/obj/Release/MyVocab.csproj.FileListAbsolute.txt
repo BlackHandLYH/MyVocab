@@ -12,3 +12,5 @@ D:\littlethings\MyVocab\MyVocab\obj\Release\MyVocab.csproj.GenerateResource.cach
 D:\littlethings\MyVocab\MyVocab\obj\Release\MyVocab.csproj.CoreCompileInputs.cache
 D:\littlethings\MyVocab\MyVocab\obj\Release\MyVocab.exe
 D:\littlethings\MyVocab\MyVocab\obj\Release\MyVocab.pdb
+D:\littlethings\MyVocab\MyVocab\obj\Release\MyVocab.csprojAssemblyReference.cache
+D:\littlethings\MyVocab\MyVocab\obj\Release\MyVocab.m.resources

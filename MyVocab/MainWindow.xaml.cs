@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.IO;
+using System.Resources;
+using System.Drawing;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
@@ -23,6 +25,7 @@ namespace MyVocab
     {
 
         public string filepath = "D:/MyVocab/vocab.txt";
+        public const string bgpath = @"./bg.png";
         public int wordIndex = 0;
         public MainWindow()
         {
@@ -41,6 +44,21 @@ namespace MyVocab
             wordIndex = Convert.ToInt32(strIndex);
 
             LabelIndex.Content = (wordIndex + 1).ToString();
+
+            BitmapImage bitmapImage = new BitmapImage();
+            using(FileStream fs = new FileStream(bgpath, FileMode.Open))
+            {
+                bitmapImage.BeginInit();
+                bitmapImage.CacheOption = BitmapCacheOption.OnLoad;
+                bitmapImage.StreamSource = fs;
+                bitmapImage.EndInit();
+            }
+            bitmapImage.Freeze();
+
+            ImageBrush bg = new ImageBrush();
+            bg.ImageSource = bitmapImage;
+            bg.Stretch = Stretch.UniformToFill;
+            MyVocabWindow.Background = bg;
         }
 
         private void TextBoxWord_KeyDown(object sender, KeyEventArgs e)
@@ -87,6 +105,16 @@ namespace MyVocab
 
         public void Finish()
         {
+            if(TextBoxWord.Text == "")
+            {
+                MessageBox.Show("Please input a word!", "No Word!", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+            if (TextBoxMean.Text == "")
+            {
+                MessageBox.Show("Please input its meaning!", "No Meaning!", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
             FileStream fs = new FileStream(filepath, FileMode.Append);
             StreamWriter sw = new StreamWriter(fs, Encoding.UTF8);
 
@@ -152,16 +180,29 @@ namespace MyVocab
                 // Open document 
                 string bgName = dlg.FileName;
 
-                
-                BitmapImage image = new BitmapImage();
-                image.BeginInit();
-                image.UriSource = new Uri(bgName);
-                image.EndInit();
-                ImageBrush bg = new ImageBrush();
-                bg.ImageSource = image;
-                bg.Stretch = Stretch.UniformToFill;
-                MyVocabWindow.Background = bg;
-                
+                using (FileStream fs = new FileStream(bgName, FileMode.Open))
+                {
+                    var ms = new MemoryStream();
+                    fs.CopyTo(ms);
+                    byte[] bytes = ms.ToArray();
+
+                    BitmapImage image = new BitmapImage();
+                    image.BeginInit();
+                    image.StreamSource = new MemoryStream(bytes);
+                    image.EndInit();
+
+                    ImageBrush bg = new ImageBrush();
+                    bg.ImageSource = image;
+                    bg.Stretch = Stretch.UniformToFill;
+                    MyVocabWindow.Background = bg;
+
+                    FileStream fsSave = new FileStream(bgpath, FileMode.OpenOrCreate);
+                    BitmapEncoder encoder = new PngBitmapEncoder();
+                    encoder.Frames.Add(BitmapFrame.Create(image));
+                    encoder.Save(fsSave);
+                    fsSave.Close();
+                }
+
             }
             else
             {
